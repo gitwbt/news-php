@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home2/aaja/websites/aaja/news
+    - export DEPLOYPATH=/home2/aaja/websites/aaja/news/
     - /bin/cp -R * $DEPLOYPATH
