@@ -467,6 +467,9 @@ img {
 img, object, embed {
   max-width: 100%; }
 
+a {
+  color: black; }
+
 .images {
   padding: 2rem; }
   .images--grid {
@@ -486,14 +489,19 @@ img, object, embed {
     .images--item:hover {
       box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1), 0 5px 5px rgba(0, 0, 0, 0.2); }
     .images--item h1, .images--item p {
-      padding-left: 1rem; }
+      padding-left: 1rem;
+      padding-right: 1rem;
+      word-break: break-word; }
     .images--item h1 {
       font-size: 1.2rem;
-      word-break: break-word;
       margin-top: 0.5rem; }
     .images--item p {
-      word-break: break-word;
       font-size: 0.875rem; }
+
+#loadmore {
+  text-align: center;
+  padding: 1rem 0rem;
+  font-weight: 600; }
 
 .flex {
   display: flex; }

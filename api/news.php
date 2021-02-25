@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $description = $_POST['description'];
     $image = $_POST['image'];
     $publish = $_POST['publish'];
-    $url = $data['url'];
+    $url = $_POST['url'];
   }
 
   if(!empty($title) && !empty($description) && !empty($image) && !empty($publish)){
@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           "success"=>false,
           "message"=>'Something went wrong.'
         ];
-        echo json_encode($res);;
+        echo json_encode($res);
     }
   }
 }
