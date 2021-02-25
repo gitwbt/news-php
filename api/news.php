@@ -8,14 +8,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $publish = $_POST['publish'];
 
   if(!empty($title) && !empty($description) && !empty($image) && !empty($publish)){
-    $query = $pdo->prepare("INSERT INTO news (title,description,image,publish) VALUES (?,?,?,?)");
-    $query->execute(array($title,$description,$image,$publish));
-    // if($query){
-    //     echo 'Data has been Inserted.',
-    // }
-    // else{
-    //     echo 'Something went wrong.'
-    // }
+    $query = $pdo->prepare("INSERT INTO news (title,description,image,publish,nid) VALUES (?,?,?,?,?)");
+    $query->execute(array($title,$description,$image,$publish,$nid));
+    if($query){
+        header('Content-Type: application/json');
+        $res = [
+          "success"=>true,
+          "message"=>'Data has been Inserted.'
+        ];
+        echo json_encode($res);
+    }else{
+        header('Content-Type: application/json');
+        $res = [
+          "success"=>false,
+          "message"=>'Something went wrong.'
+        ];
+        echo json_encode($res);;
+    }
   }
 }
 ?>
