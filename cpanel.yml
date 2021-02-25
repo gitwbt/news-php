@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home2/aaja/public_html/website/ehospital/demo_git
+    - /bin/cp -R * $DEPLOYPATH
