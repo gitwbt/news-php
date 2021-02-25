@@ -26,7 +26,7 @@
                     src="<?php echo $item['image'] ?>"
                     alt=""
                 />
-                <h1><?php echo $item['title'] ?></h1>
+                <h1 class="line-clamp-1"><?php echo $item['title'] ?></h1>
                 <p>
                  <?php echo $item['description'] ?>
                 </p>
