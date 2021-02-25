@@ -1,8 +1,16 @@
 <?php 
-    $host = 'localhost';
-    $db   = 'news_php';
-    $user = 'root';
-    $pass = '';
+
+    // Devlopment
+    // $host = 'localhost';
+    // $db   = 'news_php';
+    // $user = 'root';
+    // $pass = '';
+
+    // Producton
+    $host = 'news.aaja.co';
+    $db   = 'aaja_newsdb';
+    $user = 'aaja_newsuser';
+    $pass = 'newsdbpassword';
     
     $dsn = "mysql:host=$host;dbname=$db;";
     $options = [
